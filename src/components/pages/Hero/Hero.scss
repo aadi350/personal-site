@@ -1,0 +1,82 @@
+@import url("http://fonts.cdnfonts.com/css/gordita");
+
+.hero-container {
+  position: relative;
+  // animation: fadeIn 3s;
+
+  top: 50px;
+  width: var(--menu-width);
+  overflow-x: hidden;
+  background-color: #313131;
+  height: calc(100vh - 75px);
+  vertical-align: middle;
+  text-align: center;
+  font-family: "Gordita", sans-serif;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#front,
+#back {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  //   -ms-transform: translateY(-50%);
+  //   transform: translateY(50%);
+  //   height: 100%;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(0.5em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    // transform: translateY(0)
+  }
+}
+
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-0.5em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    // transform: translateY(0)
+  }
+}
+#front {
+    color: white;
+  z-index: 9;
+  font-weight: 200;
+  font-size: 100px;
+  line-height: 90px;
+  transform: translateY(-50%);
+  b {
+    font-weight: 500;
+  }
+}
+#back {
+  z-index: 8;
+  line-height: 0.8;
+  font-weight: 425;
+  transform: translateY(-50%);
+  font-size: 180px;
+  color: #212121;
+  #upper {
+    animation: fadeUp 1s;
+  }
+  #lower {
+    animation: fadeDown 1s;
+  }
+}

@@ -1,0 +1,100 @@
+@import url("http://fonts.cdnfonts.com/css/gordita");
+
+$nav-color: #313131;
+$accent-color: #1E6CFD;
+
+nav {
+  height: 50px;
+  width: var(--menu-width);
+  display: flex;
+  position: fixed;
+  background-color: $nav-color;
+  justify-content: flex-end;
+  align-items: center;
+
+  width: 100vw;
+  flex-direction: row;
+  z-index: 10;
+  margin: 0px auto;
+  flex-wrap: wrap;
+  top: 0;
+
+
+ 
+  .menu-items {
+    display: flex;
+    
+    align-self: flex-end;
+  }
+
+
+}
+ .logo {
+    display: flex;
+    position: fixed;
+    left: 10vw;
+    font-family: "Gordita", sans-serif;
+    font-weight: 700;
+    font-size: 1.5em;
+    justify-self: flex-start;
+    align-self: left;
+    .logotext {
+      text-decoration: none;
+      color: $accent-color;
+    }
+  }
+
+nav .menu-item {
+  a {
+    text-decoration: none;
+    color: white;
+    font-family: "Gordita", sans-serif;
+    font-weight: 300;
+    // height: inherit;
+    height: 50px;
+
+  }
+
+  :after {
+    content: '';
+    position: relative;
+    display: inline-block;
+    height: 1em;
+    top: -1em;
+    width:  95%;
+    border-bottom: 1px solid;
+    color: $accent-color;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale(0,1);
+    transform: scale(0,1);
+  }
+  
+  :hover:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  flex-grow: 1;
+  display: flex;
+  flex-basis: var(--item-width);
+  box-sizing: border-box;
+  padding: 1em 4em;
+  justify-content: center;
+  align-self: center;
+  justify-self: center;
+  perspective: 200px;
+  letter-spacing: 0.5px;
+  height: 50px;
+  font-size: 1em;
+  text-decoration: None;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  transition: color 0.1s ease-out;
+  text-align: center;
+}
+
+Link {
+  text-decoration: none;
+}

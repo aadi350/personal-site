@@ -1,0 +1,11 @@
+.projectscontainer {
+    position: relative;  
+    top: 50px;
+    width: var(--menu-width);
+    overflow-x: hidden;
+    background-color: #313131;
+    height: calc(100vh - 75px);
+    vertical-align: middle;
+    text-align: center;
+    font-family: "Gordita", sans-serif;
+}
