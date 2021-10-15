@@ -1,13 +1,163 @@
+@import url("http://fonts.cdnfonts.com/css/gordita");
+
+$nav-color: #313131;
+$accent-color: #1e6cfd;
+
+a,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+}
+
+.socialicon {
+  font-size: 0.3em;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+  text-decoration: none;
+  animation-name: fadeUp;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+
 .contactcontainer {
-    position: relative;  
-    top: 50px;
+  position: relative;
+  top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: var(--menu-width);
+  overflow-x: hidden;
+  background-color: $nav-color;
+  height: calc(100vh - 75px);
+  vertical-align: middle;
+  text-align: center;
+  font-family: "Gordita", sans-serif;
+  color: white;
+  .contactbtn {
+      margin-top: -80px;
+      animation: fadeUp 1s;
+  }
+}
+
+.main {
+  font-size: 7em;
+  .maintext {
+    animation: fadeUp 1s;
+  }
+
+  .social {
+    border: none;
+    height: 5vh;
     display: flex;
     justify-content: center;
-    width: var(--menu-width);
-    overflow-x: hidden;
-    background-color: #313131;
-    height: calc(100vh - 75px);
-    vertical-align: middle;
-    text-align: center;
-    font-family: "Gordita", sans-serif;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+//=== Drawing effect
+
+@mixin btn-border-drawing(
+  $color: #ccc,
+  $hover: black,
+  $width: 2px,
+  $vertical: top,
+  $horizontal: left,
+  $duration: 0.25s
+) {
+  box-shadow: inset 0 0 0 $width $color;
+  color: $color;
+  transition: color $duration $duration/3;
+  position: relative;
+
+  &::before,
+  &::after {
+    border: 0 solid transparent;
+    box-sizing: border-box;
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+
+    #{$vertical}: 0;
+    #{$horizontal}: 0;
+  }
+
+  &::before {
+    $h-side: if($horizontal == "left", "right", "left");
+
+    border-#{$vertical}-width: $width;
+    border-#{$h-side}-width: $width;
+  }
+
+  &::after {
+    $v-side: if($vertical == "top", "bottom", "top");
+
+    border-#{$v-side}-width: $width;
+    border-#{$horizontal}-width: $width;
+  }
+
+  &:hover {
+    color: $hover;
+    background-color: transparent;
+    &::before,
+    &::after {
+      border-color: $hover;
+      transition: border-color 0s, width $duration, height $duration;
+      width: 100%;
+      height: 100%;
+    }
+
+    &::before {
+      transition-delay: 0s, 0s, $duration;
+    }
+
+    &::after {
+      transition-delay: 0s, $duration, 0s;
+    }
+  }
+}
+
+.draw-border {
+  @include btn-border-drawing($nav-color, $accent-color, 4px, bottom, right, 0.25s);
+}
+
+.draw-icon-border {
+
+  @include btn-border-drawing(white, $accent-color, 0px, bottom, right, 0.15s);
+}
+
+//=== Button styling, semi-ignore
+.btn {
+  border: none;
+  cursor: pointer;
+  color: white;
+  background: $accent-color;
+  line-height: 1.5;
+  font-weight: 500;
+  font-size: 0.2em;
+  font-family: "Gordita", sans-serif;
+  padding: 1em 2em;
+  letter-spacing: 0.05rem;
+
+  &:focus {
+    outline: 2px dotted $accent-color;
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(0.5em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    // transform: translateY(0)
+  }
 }
