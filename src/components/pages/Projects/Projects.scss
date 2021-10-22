@@ -1,9 +1,14 @@
 .projectscontainer {
     position: relative;  
+    padding-top: 10vh;
+    display: flex;
+    align-items: center;
+    justify-self: flex-start;
+    flex-direction: column;
     top: 50px;
     width: var(--menu-width);
     overflow-x: hidden;
-    background-color: #313131;
+    background-color: white; 
     height: calc(100vh - 75px);
     vertical-align: middle;
     text-align: center;

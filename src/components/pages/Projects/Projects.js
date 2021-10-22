@@ -1,11 +1,11 @@
 import React from 'react';
 import './Projects.scss'
-
+import Project from './Project';
 
 const Projects = () => {
     return (
         <div class="projectscontainer">
-                Projects
+                <Project name="Test Project" />
         </div>
     );
 }
