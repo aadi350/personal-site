@@ -22,6 +22,10 @@
   }
 }
 
+.particles {
+  animation: fadeIn 2s;
+}
+
 #front,
 #back {
   position: absolute;
