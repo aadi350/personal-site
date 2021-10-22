@@ -71,9 +71,14 @@
     "detect_on": "canvas",
     "events": {
       "onhover": {
-        "enable": false,
-        "mode": "repulse"
+        "enable": true,
+        "mode": "grab",
+        "repulse": {
+          "distance": 10,
+          "duration": 0.5
+        }
       },
+
       "onclick": {
         "enable": false,
         "mode": "push"
