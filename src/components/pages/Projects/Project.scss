@@ -17,9 +17,11 @@ $accent-color: #1E6CFD;
 .projectdetails { 
     flex: 1;
  position: relative;
-    display: inline-block;   
-
-
+    display: flex;   
+    justify-content: center;
+    flex-direction: column;
+    padding: 4em;
+    box-sizing: border-box;
     margin: 4em;
     //padding: 10px;
     border: 1px solid red;
@@ -27,14 +29,29 @@ $accent-color: #1E6CFD;
     .projectname {
     font-family: "Gordita", sans-serif;
     font-weight: 700;
-    font-size: 1.5em;
+    font-size: 2.5em;
     }
 
+    .projectdescription {
+        font-size: 1.5em;
+    }
 
 }
 
+.projecticon {
+  font-size: 0.3em;
+  height: 3em;
+  color: $accent-color;
+  padding-left: 1.3em;
+  padding-right: 2.3em;
+  text-decoration: none;
+  animation-name: fadeUp;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
     .projecttags {
-       display: block; 
+       display: flex; 
        position: absolute;
     bottom: 0px; 
     left: 0px;

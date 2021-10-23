@@ -5,31 +5,28 @@ import './Tag.scss'
 
 
 const  Tag = (props) => {
-    let color;
-    switch(props.color) {
-        case "red":
-            color="#E84855";
+    let tagType = "tag tag-lg";
+    
+    switch(props.tagType) {
+        case "field":
+            tagType = tagType + " " + "tag-field"
             break;
+        case "cloud":
+             tagType = tagType + " " + "tag-cloud";
+            break;
+        case "bigdata":
+             tagType = tagType + " " + "tag-bigdata";
+            break
         default:
-            color="green";
+            tagType="";
             break;
     }
-
-    const tagstyle = {
-                borderRadius: '10em',
-                display: "inline-block",
-                color: "white",
-                padding: "0 0.5em",
-                verticalAlign: "middle",
-                textAlign: "center",
-                width: '100%',
-                backgroundColor: color
-            }
+    
     return (
-        <div class="tag" style={tagstyle} >
-             #{props.text}t
-        </div>
-    );
+        <span class={tagType}>
+            #{props.text}
+        </span>
+        );
 }
 
 export default Tag;
