@@ -1,7 +1,7 @@
 import React from "react";
 import './Hero.scss'
 import Particle from "react-particles-js";
-import particlesConfig from "../../assets/particlesConfig.json";
+import particlesConfig from "../../../assets/particlesConfig.json";
 
 const Hero = () => {
     return (

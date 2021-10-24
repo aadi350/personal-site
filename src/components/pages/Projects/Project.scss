@@ -20,11 +20,10 @@ $accent-color: #1E6CFD;
     display: flex;   
     justify-content: center;
     flex-direction: column;
-    padding: 4em;
-    box-sizing: border-box;
+    padding: 2em;
     margin: 4em;
     //padding: 10px;
-    border: 1px solid red;
+    // border: 1px solid red;
     height: 45vh;
     .projectname {
     font-family: "Gordita", sans-serif;
@@ -40,10 +39,8 @@ $accent-color: #1E6CFD;
 
 .projecticon {
   font-size: 0.3em;
-  height: 3em;
+  height: 5em;
   color: $accent-color;
-  padding-left: 1.3em;
-  padding-right: 2.3em;
   text-decoration: none;
   animation-name: fadeUp;
   animation-duration: 1s;
@@ -51,14 +48,22 @@ $accent-color: #1E6CFD;
 }
 
     .projecttags {
-       display: flex; 
-       position: absolute;
-    bottom: 0px; 
-    left: 0px;
-    margin: 10px; 
+        display: flex; 
+        position: absolute;
+        bottom: 0px; 
+        left: 0px;
+        margin: 10px; 
     }
+
+    .projectlink {
+        display: flex; 
+        position: absolute;
+        bottom: 0px; 
+        right: 0px;
+        margin: 20px; 
+    }
+
 .projectimage{
     margin: 3em;
     width: 60vh;
-    border: 1px solid red;
 }
