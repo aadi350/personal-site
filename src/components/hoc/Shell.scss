@@ -1,0 +1,34 @@
+$transition-time: 1.5s;
+
+
+.pageshell {
+    animation: fadeIn  $transition-time;
+    -webkit-animation: fadeIn $transition-time;
+    -moz-animation: fadeIn  $transition-time;
+    -o-animation: fadeIn $transition-time;
+    -ms-animation: fadeIn $transition-time;
+  }
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }

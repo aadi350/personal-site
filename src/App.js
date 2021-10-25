@@ -7,18 +7,21 @@ import Experience from "./components/pages/Experience/Experience";
 import Skills from "./components/pages/Skills/Skills";
 import Writing from "./components/pages/Writing/Writing";
 import Contact from "./components/pages/Contact/Contact";
+import { CSSTransition, TransitionGroup } from "react-transition-group"; // ES6
+import Shell from './components/hoc/Shell';
 
 function App() {
   return (
     <Router>
       <Navbar />
+
       <Switch>
-        <Route path="/" exact component={Hero} />
-        <Route path="/projects" component={Projects} />
-        <Route path="/experience" component={Experience} />
-        <Route path="/skills" component={Skills} />
-        <Route path="/writing" component={Writing} />
-        <Route path="/contact" component={Contact} />
+        <Route path="/" exact component={Shell(Hero)} />
+        <Route path="/projects" component={Shell(Projects)} />
+        <Route path="/experience" component={Shell(Experience)} />
+        <Route path="/skills" component={Shell(Skills)} />
+        <Route path="/writing" component={Shell(Writing)} />
+        <Route path="/contact" component={Shell(Contact)} />
       </Switch>
     </Router>
   );
