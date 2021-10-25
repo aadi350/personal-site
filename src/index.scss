@@ -1,3 +1,5 @@
+$logo-font: "Atiba sans-serif";
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +7,25 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@font-face {
+   font-family: Atiba;
+   src:url("assets/ttf/Atiba.ttf");
+}
+
+@font-face {
+  font-family: Airborne;
+  src:url("assets/ttf/AIRBORNE\ GP.ttf");
+}
+
+@font-face {
+  font-family: ATIE;
+  src:url("assets/ttf/AndThenItEnds.otf");  
 }

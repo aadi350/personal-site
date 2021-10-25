@@ -7,12 +7,19 @@ $accent-color: #1E6CFD;
 .projectcontainer {
     width: 80vw;
     height: 60vh;
+    margin-bottom: 8em;
     display: flex;
     flex-direction: row;
     align-items: center;
     box-shadow: 6px 6px 10px #888888;
      border-radius: 10px;
+     transition-duration: 1s;
+    &:hover {
+        box-shadow:  6px 6px 10px #1E6CFD;
+    }
 }
+
+
 
 .projectdetails { 
     flex: 1;
@@ -40,11 +47,10 @@ $accent-color: #1E6CFD;
 .projecticon {
   font-size: 0.3em;
   height: 5em;
-  color: $accent-color;
   text-decoration: none;
-  animation-name: fadeUp;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
+position: absolute;
+right: 10px;
+bottom: 0px;
 }
 
     .projecttags {
@@ -65,5 +71,9 @@ $accent-color: #1E6CFD;
 
 .projectimage{
     margin: 3em;
-    width: 60vh;
+    max-height: 100%;
+    width: 24vw;
+    height: 24vw;
+    object-fit: cover;
+    object-position: center center;
 }

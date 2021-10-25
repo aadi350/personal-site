@@ -11,6 +11,9 @@ const  Tag = (props) => {
         case "field":
             tagType = tagType + " " + "tag-field"
             break;
+        case "tech":
+                tagType = tagType + " " + "tag-tech"
+                break;
         case "cloud":
              tagType = tagType + " " + "tag-cloud";
             break;

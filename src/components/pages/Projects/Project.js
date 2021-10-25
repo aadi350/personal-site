@@ -7,17 +7,46 @@ import {
   faLink
 } from "@fortawesome/free-solid-svg-icons";
 
+import {
+    faGithub
+} from "@fortawesome/free-brands-svg-icons";
 
 const Project = (props) => {
+    let projectlinks = [];
+    let tagType = "tag tag-lg";
+    
+    if (props.gitlink != null) {
+        projectlinks.push(<a href={props.gitlink} style={{color: 'black', fontSize: '1.4em'}} target="_blank"><FontAwesomeIcon class="projecticon" icon={faGithub} /></a>)
+    }
+
+    if (props.link != null) {
+        projectlinks.push(<a href={props.link} style={{color: 'blue', fontSize: '1.4em'}}  target="_blank"><FontAwesomeIcon class="projecticon" icon={faLink} /></a>)
+    }
+
+    switch(props.tagType) {
+        case "field":
+            tagType = tagType + " " + "tag-field"
+            break;
+        case "tech":
+                tagType = tagType + " " + "tag-tech"
+                break;
+        case "cloud":
+             tagType = tagType + " " + "tag-cloud";
+            break;
+        case "bigdata":
+             tagType = tagType + " " + "tag-bigdata";
+            break
+        default:
+            tagType="";
+            break;
+    }
     return (
         <div class="projectcontainer">
             <div class="projectdetails">
                 <div class="projectname">{props.name}</div>
               
                 <div class="projectdescription">{props.description}</div>
-                  <a class="projectlink" href={props.link} target="_blank">
-                     <FontAwesomeIcon class="projecticon" icon={faLink} /></a>
-
+                {projectlinks}
                 <div class="projecttags">
                     {
                           props.tags.map(function(each){
@@ -26,8 +55,9 @@ const Project = (props) => {
                     }
                 </div>
             </div>
-            <div class="projectimage">
-                <img src="https://t4.ftcdn.net/jpg/02/11/61/95/360_F_211619589_fnRk5LeZohVD1hWInMAQkWzAdyVlS5ox.jpg"  height="150%"></img>
+            <div>
+           
+                <img class="projectimage" src={props.imagelink}  height="150%"></img>
             </div>
         </div>
     );
