@@ -24,6 +24,8 @@ const Project = (props) => {
     }
 
     switch(props.tagType) {
+        case "nvidia":
+            tagType = tagType + " " +"nvidia"
         case "field":
             tagType = tagType + " " + "tag-field"
             break;
@@ -41,6 +43,7 @@ const Project = (props) => {
             break;
     }
     return (
+        <a href={props.mainlink} target="_blank">
         <div class="projectcontainer">
             <div class="projectdetails">
                 <div class="projectname">{props.name}</div>
@@ -60,6 +63,7 @@ const Project = (props) => {
                 <img class="projectimage" src={props.imagelink}  height="150%"></img>
             </div>
         </div>
+        </a>
     );
 }
 

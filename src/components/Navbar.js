@@ -4,14 +4,39 @@ import "./Navbar.scss";
 
 const Navbar = () => {
   return (
-    <nav id="menu">
-      <div class="logo">
-          <Link class="logotext" to="/">adi</Link>
-      </div>
+    <header>
+      <input type="checkbox" class="toggle" id="nav-toggle"></input>
+      <label for="nav-toggle" id="nav-toggle-label">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </label>
+      <nav>
+        <div class="logo">
+          <Link class="logotext" to="/">
+            adi
+          </Link>
+        </div>
 
-      
-      <div class="menu-items">
-        <div class="menu-item effect-underline">
+        <ul class="menu-items">
+          <li class="menu-item">
+            <Link to="/projects">Projects</Link>
+          </li>
+          <li class="menu-item">
+            <Link to="/skills">Skills</Link>
+          </li>
+          <li class="menu-item">
+            <Link to="/experience">Experience</Link>
+          </li>
+          <li class="menu-item">
+            <Link to="/writing">Writing</Link>
+          </li>
+          <li class="menu-item">
+            <Link to="/contact">Contact</Link>
+          </li>
+        </ul>
+      </nav>
+      {/* <div class="menu-item effect-underline">
           <Link  to="/projects">Projects</Link>
         </div>
         <div class="menu-item">
@@ -25,9 +50,8 @@ const Navbar = () => {
         </div>
         <div class="menu-item">
           <Link to="/contact">Contact</Link>
-        </div>
-      </div>
-    </nav>
+        </div> */}
+    </header>
   );
 };
 

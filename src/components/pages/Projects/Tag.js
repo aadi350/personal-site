@@ -8,6 +8,9 @@ const  Tag = (props) => {
     let tagType = "tag tag-lg";
     
     switch(props.tagType) {
+        case "nvidia":
+            tagType = tagType + " " + "tag-nvidia"
+            break;
         case "field":
             tagType = tagType + " " + "tag-field"
             break;

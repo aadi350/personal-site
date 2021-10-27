@@ -2,9 +2,20 @@
 
 $nav-color: #313131;
 $accent-color: #1E6CFD;
-
+a {
+    text-decoration: none;
+}
 
 .projectcontainer {
+
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently */
+     
     width: 80vw;
     height: 60vh;
     margin-bottom: 8em;
@@ -21,9 +32,10 @@ $accent-color: #1E6CFD;
 
 
 
+
 .projectdetails { 
     flex: 1;
- position: relative;
+    position: relative;
     display: flex;   
     justify-content: center;
     flex-direction: column;
@@ -33,13 +45,13 @@ $accent-color: #1E6CFD;
     // border: 1px solid red;
     height: 45vh;
     .projectname {
-    font-family: "Gordita", sans-serif;
-    font-weight: 700;
-    font-size: 2.5em;
+        font-family: "Gordita", sans-serif;
+        font-weight: 700;
+        font-size: 3em;
     }
 
     .projectdescription {
-        font-size: 1.5em;
+        font-size: 1.75em;
     }
 
 }
@@ -76,4 +88,20 @@ bottom: 0px;
     height: 24vw;
     object-fit: cover;
     object-position: center center;
+}
+
+@media screen and (max-width: 768px){
+    .projectimage {
+        display: None;
+    }
+    .projectname {
+        font-family: "Gordita", sans-serif;
+        font-weight: 700;
+        font-size: 1.5em;
+        }
+
+        
+    .projectdescription {
+        font-size: 1.5em;
+    }
 }

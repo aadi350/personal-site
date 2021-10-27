@@ -1,7 +1,19 @@
 @import url("http://fonts.cdnfonts.com/css/gordita");
 
 $nav-color: #313131;
-$accent-color: #1E6CFD;
+$accent-color: #1e6cfd;
+
+:root {
+  --fg-color: rgba(255, 255, 255, 0.9);
+  --bg-color: #2b2b2b;
+  --highlight-primary: #008aff;
+  --gradient: linear-gradient(300deg, #ba4aff, rgba(186, 74, 255, 0) 70%),
+    linear-gradient(227deg, #008aff, rgba(0, 138, 255, 0) 70%),
+    linear-gradient(104deg, #00ffc6, rgba(0, 255, 198, 0) 74%);
+  --nav-height: 3rem;
+  --transition: 250ms ease-out;
+  --transition-long: 500ms ease-out;
+}
 
 nav {
   height: 50px;
@@ -9,68 +21,58 @@ nav {
   display: flex;
   position: fixed;
   background-color: $nav-color;
-  justify-content: flex-end;
-  align-items: center;
-
+  justify-content: space-evenly;
   width: 100vw;
   flex-direction: row;
   z-index: 10;
   margin: 0px auto;
   flex-wrap: wrap;
   top: 0;
-
-
- 
   .menu-items {
     display: flex;
-    
-    align-self: flex-end;
   }
-
-
 }
- .logo {
-    display: flex;
-    position: fixed;
-    left: 10vw;
-    font-family: "ATIE", sans-serif;
-    font-weight: 400;
-    font-size: 1.5em;
-    justify-self: flex-start;
-    align-self: left;
-    .logotext {
-      text-decoration: none;
-      color: $accent-color;
-    }
+
+.logo {
+  position: absolute;
+
+  left: 10vw;
+  font-family: "ATIE", sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+  align-self: center;
+  .logotext {
+    text-decoration: none;
+    color: $accent-color;
   }
+}
 
 nav .menu-item {
   a {
+    position: absolute;
     text-decoration: none;
     color: white;
     font-family: "Gordita", sans-serif;
     font-weight: 300;
-    // height: inherit;
-    height: 50px;
-
+    top: 0;
   }
 
   :after {
-    content: '';
+    content: "";
     position: relative;
     display: inline-block;
     height: 1em;
     top: -1em;
-    width:  95%;
+    width: 95%;
     border-bottom: 1px solid;
     color: $accent-color;
     opacity: 0;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
-    -webkit-transform: scale(0,1);
-    transform: scale(0,1);
+    -webkit-transform: scale(0, 1);
+    transform: scale(0, 1);
   }
-  
+
   :hover:after {
     opacity: 1;
     -webkit-transform: scale(1);
@@ -98,3 +100,131 @@ nav .menu-item {
 Link {
   text-decoration: none;
 }
+
+@media (max-width: 1200px) {
+  .logo {
+    display: none;
+  }
+}
+
+#nav-toggle-label {
+  display: none;
+  cursor: pointer;
+}
+
+#nav-toggle {
+  display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+  nav { 
+    height: 10vh;
+    justify-content: center;
+    .menu-items {
+      .menu-item {
+        height: inherit;
+      }
+      font-size:10px;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+  }
+}
+}
+
+// @media screen and (max-width: 768px) {
+//   nav {
+//     position: fixed;
+//     top: 0;
+//     bottom: 0;
+//     width: 24rem;
+//     right: 0rem;
+
+//     padding-top: var(--nav-height);
+//     clip-path: circle(
+//         calc(var(--nav-height) / 3)
+//         at 
+//         calc(100% - var(--nav-height) / 2) 
+//         calc(0% + var(--nav-height) / 2)
+//     );
+
+//     background: var(--gradient);
+//     box-shadow: -2px 2px 8px 0px black;
+    
+//     transition: clip-path var(--transition-long), 
+//       background-color var(--transition-long);
+
+//   }
+
+//   nav ul {
+//     grid-auto-flow: row;
+//     grid-template-columns: 1fr;
+//     grid-template-rows: none;
+//     grid-auto-rows: max-content;
+//     gap: 0.5rem;
+
+//     padding: 0;
+//   }
+
+//   nav Link {
+//     place-content: flex-start;
+//     padding: 0.5rem 1.5rem;
+//   }
+
+
+
+//   nav Link:hover {
+//     background-color: var(--bg-color);
+//   }
+
+
+
+
+
+//   #nav-toggle:checked + * + nav {
+//     clip-path: circle(150vmax at 100% 0%);
+//     background-color: var(--bg-color);
+//   }
+
+//   #nav-toggle-label {
+//     --size: calc(var(--nav-height) / 3);
+//     --bar-height: 2px;
+
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+//     flex-basis: auto;
+    
+//     width: var(--size);
+//     height: var(--size);
+//     margin-right: calc(var(--nav-height) / 3);
+
+//     z-index: 2;
+//   }
+
+//   #nav-toggle-label .bar {
+//     display: inline-block;
+//     height: var(--bar-height);
+//     width: 100%;
+//     background-color: var(--bg-color);
+//     transition: transform 250ms ease-out;
+//   }
+
+//   #nav-toggle:checked + #nav-toggle-label > .bar:nth-child(1) {
+//     transform: 
+//       translate(0, calc(var(--size) / 2 - var(--bar-height) / 2)) 
+//       rotate(225deg);
+//   }
+
+//   #nav-toggle:checked + #nav-toggle-label > .bar:nth-child(2) {
+//     transform: scaleX(0);
+//   }
+
+//   #nav-toggle:checked + #nav-toggle-label > .bar:nth-child(3) {
+//     transform: 
+//       translate(0, calc(-1 * var(--size) / 2 + var(--bar-height) / 2)) 
+//       rotate(135deg);
+//   }
+// }
