@@ -1,0 +1,19 @@
+.BlogFrameContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+
+.BlogContainer {
+    width: 80%;
+    border: red solid 1px; 
+    display: inline-block;
+
+    background-color: white;
+}
+
+
+#MarkDown {
+    background-color: white;
+}
