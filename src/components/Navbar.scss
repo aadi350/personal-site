@@ -10,18 +10,19 @@ $accent-color: #1e6cfd;
   --gradient: linear-gradient(300deg, #ba4aff, rgba(186, 74, 255, 0) 70%),
     linear-gradient(227deg, #008aff, rgba(0, 138, 255, 0) 70%),
     linear-gradient(104deg, #00ffc6, rgba(0, 255, 198, 0) 74%);
-  --nav-height: 3rem;
+  --nav-height: 3vh;
   --transition: 250ms ease-out;
   --transition-long: 500ms ease-out;
 }
 
 nav {
-  height: 50px;
+  height: 7vh;// 50px;
   width: var(--menu-width);
   display: flex;
   position: fixed;
   background-color: $nav-color;
   justify-content: space-evenly;
+  align-items: center;
   width: 100vw;
   flex-direction: row;
   z-index: 10;
@@ -29,7 +30,13 @@ nav {
   flex-wrap: wrap;
   top: 0;
   .menu-items {
-    display: flex;
+    display: flex; 
+    height: var(--menu-width); 
+
+    a {
+      height: inherit;
+    }
+
   }
 }
 
@@ -39,7 +46,7 @@ nav {
   left: 10vw;
   font-family: "ATIE", sans-serif;
   font-weight: 400;
-  font-size: 1.5em;
+  font-size: 4vh;
   align-self: center;
   .logotext {
     text-decoration: none;
@@ -54,6 +61,7 @@ nav .menu-item {
     color: white;
     font-family: "Gordita", sans-serif;
     font-weight: 300;
+    line-height: 3vh;
     top: 0;
   }
 
@@ -61,7 +69,7 @@ nav .menu-item {
     content: "";
     position: relative;
     display: inline-block;
-    height: 1em;
+    height: 2.5vh;
     top: -1em;
     width: 95%;
     border-bottom: 1px solid;
@@ -83,14 +91,14 @@ nav .menu-item {
   display: flex;
   flex-basis: var(--item-width);
   box-sizing: border-box;
-  padding: 1em 4em;
+  padding: 2.5vh 10vh;
   justify-content: center;
   align-self: center;
   justify-self: center;
   perspective: 200px;
   letter-spacing: 0.5px;
-  height: 50px;
-  font-size: 1em;
+  height: 2.5vh;
+  font-size: 2.5vh;
   text-decoration: None;
   text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
   transition: color 0.1s ease-out;
@@ -133,98 +141,3 @@ Link {
   }
 }
 }
-
-// @media screen and (max-width: 768px) {
-//   nav {
-//     position: fixed;
-//     top: 0;
-//     bottom: 0;
-//     width: 24rem;
-//     right: 0rem;
-
-//     padding-top: var(--nav-height);
-//     clip-path: circle(
-//         calc(var(--nav-height) / 3)
-//         at 
-//         calc(100% - var(--nav-height) / 2) 
-//         calc(0% + var(--nav-height) / 2)
-//     );
-
-//     background: var(--gradient);
-//     box-shadow: -2px 2px 8px 0px black;
-    
-//     transition: clip-path var(--transition-long), 
-//       background-color var(--transition-long);
-
-//   }
-
-//   nav ul {
-//     grid-auto-flow: row;
-//     grid-template-columns: 1fr;
-//     grid-template-rows: none;
-//     grid-auto-rows: max-content;
-//     gap: 0.5rem;
-
-//     padding: 0;
-//   }
-
-//   nav Link {
-//     place-content: flex-start;
-//     padding: 0.5rem 1.5rem;
-//   }
-
-
-
-//   nav Link:hover {
-//     background-color: var(--bg-color);
-//   }
-
-
-
-
-
-//   #nav-toggle:checked + * + nav {
-//     clip-path: circle(150vmax at 100% 0%);
-//     background-color: var(--bg-color);
-//   }
-
-//   #nav-toggle-label {
-//     --size: calc(var(--nav-height) / 3);
-//     --bar-height: 2px;
-
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-between;
-//     flex-basis: auto;
-    
-//     width: var(--size);
-//     height: var(--size);
-//     margin-right: calc(var(--nav-height) / 3);
-
-//     z-index: 2;
-//   }
-
-//   #nav-toggle-label .bar {
-//     display: inline-block;
-//     height: var(--bar-height);
-//     width: 100%;
-//     background-color: var(--bg-color);
-//     transition: transform 250ms ease-out;
-//   }
-
-//   #nav-toggle:checked + #nav-toggle-label > .bar:nth-child(1) {
-//     transform: 
-//       translate(0, calc(var(--size) / 2 - var(--bar-height) / 2)) 
-//       rotate(225deg);
-//   }
-
-//   #nav-toggle:checked + #nav-toggle-label > .bar:nth-child(2) {
-//     transform: scaleX(0);
-//   }
-
-//   #nav-toggle:checked + #nav-toggle-label > .bar:nth-child(3) {
-//     transform: 
-//       translate(0, calc(-1 * var(--size) / 2 + var(--bar-height) / 2)) 
-//       rotate(135deg);
-//   }
-// }

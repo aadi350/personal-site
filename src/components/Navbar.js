@@ -23,11 +23,12 @@ const Navbar = () => {
             <Link to="/projects">Projects</Link>
           </li>
           <li class="menu-item">
-            <Link to="/skills">Skills</Link>
-          </li>
-          <li class="menu-item">
             <Link to="/experience">Experience</Link>
           </li>
+          <li class="menu-item">
+            <Link to="/gists">Gists</Link>
+          </li>
+
           <li class="menu-item">
             <Link to="/writing">Writing</Link>
           </li>
