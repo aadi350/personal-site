@@ -30,7 +30,7 @@ const Navbar = () => {
           </li>
 
           <li class="menu-item">
-            <Link to="/writing">Writing</Link>
+            <a href="https://dev.to/_aadidev" target="_blank">Writing</a>
           </li>
           <li class="menu-item">
             <Link to="/contact">Contact</Link>

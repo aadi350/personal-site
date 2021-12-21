@@ -1,23 +1,23 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import ReactDOM from "react-dom";
 import './BlogTitle.scss';
 
 const BlogTitle = (props) => {
     return(
         <>
-        <a href={props.mainlink} target="_blank">
-        <div class="blogcontainer">
-            <div class="blogdetails">
-                <div class="blogname">{props.name}</div>
-              
-              
+            <Link to={"./writing/{props.blogtitle}"}>
+            <div class="blogcontainer">
+                <div class="blogdetails">
+                    <div class="blogname">{props.name}</div>
+                </div>
+                <div>
+                    <img class="projectimage" src={props.imagelink}  height="150%"></img>
+                </div>
             </div>
-            <div>
-           
-                <img class="projectimage" src={props.imagelink}  height="150%"></img>
-            </div>
-        </div>
-        </a>
+            </Link>
+
+       
         </>
     )
 }

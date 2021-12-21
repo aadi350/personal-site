@@ -7,7 +7,7 @@ const BlogFrame = (props) => {
   return (
     <div class="BlogFrameContainer">
       <div class="BlogContainer">
-        <Markdown options={{ forceBlock: true }}>{props.markdown}</Markdown>
+        test blog container 
       </div>
     </div>
   );
