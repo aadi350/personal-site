@@ -26,7 +26,7 @@ const Navbar = () => {
             <Link to="/experience">Experience</Link>
           </li>
           <li class="menu-item">
-            <Link to="/gists">Gists</Link>
+            <a href="https://gist.github.com/aadi350" target="_blank">Gists</a>
           </li>
 
           <li class="menu-item">
