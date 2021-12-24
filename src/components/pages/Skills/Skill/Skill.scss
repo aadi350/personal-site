@@ -1,0 +1,16 @@
+.subskillcontainer {
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px dashed red;
+}
+
+.subskillimage {
+    width: 5em;
+}
+
+.subskillname {
+    margin-left: 3em;
+    align-self: flex-start;
+}

@@ -1,0 +1,59 @@
+$accent-color: #1e6cfd;
+hr {
+    border: solid $accent-color 2px;
+    width: 16vw;
+}
+
+ul {
+    list-style: none;
+}
+.skillscontainer {
+    position: relative;  
+    padding-top: 10vh;
+    height: 90vh;
+    width: 100vw;
+
+    border: dashed 3px $accent-color;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    top: 50px;
+    width: var(--menu-width);
+    overflow-x: hidden;
+    background-color: white; 
+    height: calc(100vh - 75px);
+    font-family: "Gordita", sans-serif;
+}
+.skillcontainer {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently */
+    
+    width: 18vw;
+    height: 60vh;
+    margin: 0em 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: middle;
+    align-items: center;
+    box-shadow: 6px 6px 10px #888888;
+     border-radius: 10px;
+     transition-duration: 1s;
+    &:hover {
+        box-shadow:  6px 6px 10px #1E6CFD;
+    }
+}
+
+    .skillname {
+        font-family: "Gordita", sans-serif;
+        font-weight: 700; 
+        line-height: 1em;
+        font-size: 2.5em;
+        justify-self: flex-start;
+        align-self: flex-start;
+    }
