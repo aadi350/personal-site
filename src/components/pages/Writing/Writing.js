@@ -9,7 +9,7 @@ import BlogTitle from './BlogTitle.js'
 const Writing = () => {
     return (
         <div class="writingcontainer">
-            Test
+            
         </div>
     );
 }
