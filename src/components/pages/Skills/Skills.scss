@@ -7,25 +7,35 @@ hr {
 ul {
     list-style: none;
 }
+
+.particles {
+  animation: fadeIn 2s;
+}
 .skillscontainer {
     position: relative;  
-    padding-top: 10vh;
-    height: 90vh;
+    top: 7vh;
+    height: 93vh;
     width: 100vw;
-
-    border: dashed 3px $accent-color;
 
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    top: 50px;
     width: var(--menu-width);
     overflow-x: hidden;
-    background-color: white; 
-    height: calc(100vh - 75px);
+    background-color:  #313131; 
     font-family: "Gordita", sans-serif;
 }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .skillcontainer {
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */

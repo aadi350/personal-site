@@ -1,10 +1,15 @@
 import React from "react";
 import Skill from './Skill/Skill';
 import './Skills.scss';
+import Particle from "react-particles-js";
+import particlesConfig from "../../../assets/particlesConfig.json";
+
 
 const Skills = () => {
     return (
         <div class="skillscontainer">
+
+            <Particle params={particlesConfig} className="particles" />
             <div class="skillcontainer">
                 <div class="projectdetails">
                     <div class="skillname">Data Wrangling</div>
