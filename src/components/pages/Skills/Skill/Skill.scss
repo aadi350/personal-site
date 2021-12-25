@@ -1,9 +1,14 @@
+FontAwesomeIcon {
+    margin: 0 0 0 0;
+    padding-right: 0px;
+}
 .subskillcontainer {
     width: inherit;
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
-    border: 1px dashed red;
+    border: None;
 }
 
 .subskillimage {
@@ -11,6 +16,8 @@
 }
 
 .subskillname {
-    margin-left: 3em;
-    align-self: flex-start;
+    font-size: 1.5em;
+    justify-self: center;
+    margin-left: 1.5em;
+    align-self: center;
 }
