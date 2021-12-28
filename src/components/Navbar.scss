@@ -124,18 +124,27 @@ Link {
 
 
 @media screen and (max-width: 768px) {
+  .hero-container {
+    #front, #back{
+      display: none;
+    }
+  }
   nav { 
-    height: 10vh;
+    height: 100vh;
     justify-content: center;
     .menu-items {
+
+    flex-direction: column;
+    align-items: center;
       .menu-item {
         height: inherit;
+        font-size:3vh;
+        line-height: 3vh;
+        margin: 0px;
+        padding-top: 3vh;
+        padding-bottom: 5px;
       }
-      font-size:10px;
     width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    padding: 0;
   }
 }
 }
